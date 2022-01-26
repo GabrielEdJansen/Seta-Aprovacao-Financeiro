@@ -20,7 +20,7 @@ function isFormValid() {
     let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
 
     var isNullSupAproJusti = document.getElementById("SupAproJusti").value;
-    if (isNullSupAproJusti == '') {
+    if ((isNullSupAproJusti == '') && (CheckNaoIntegraTitulo == true)) {
         document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-invalid");
     } else {
         document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
