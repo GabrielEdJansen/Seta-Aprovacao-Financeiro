@@ -571,6 +571,7 @@ function _init(data, info) {
 function _saveData(data, info) {
     let newData = {};
 
+
     let selectForm = document.getElementById("selectTipFor");
     newData.selectTipFor = selectForm.options[selectForm.selectedIndex].value;
 
@@ -661,6 +662,16 @@ function _saveData(data, info) {
     newData.ForPagChavePix = document.getElementById("ForPagChavePix").value;
 
     newData.SupAproJusti = document.getElementById("SupAproJusti").value;
+
+    let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
+    let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
+
+    if(CheckIntegraTitulo == true){
+        newData.integraTitulo = "S";
+    }
+    if(CheckNaoIntegraTitulo == true){
+        newData.integraTitulo = "N";
+    }
 
     console.log(newData);
     return {
