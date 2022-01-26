@@ -158,7 +158,7 @@ function selecionaTipoFormulario() {
 
         eVal.style.display = 'flex';
 
-        document.getElementById("NumNf").value = ''
+        //document.getElementById("NumNf").value = ''
     }
     if (document.getElementById("selectTipFor").value == 'Pagamento') {
 
