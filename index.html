@@ -36,7 +36,7 @@
   <form class="row g-3 needs-validation" id="form" novalidate>
 
     <div class="form-check">
-      <input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckIntegraTitulo">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="CheckIntegraTitulo" oninput="VerificaSeMotivoEstaPreenchido()">
       <label class="form-check-label" for="flexRadioDefault1">
         Integrar Título ao ERP *caso solicitação for aprovada
       </label>
@@ -47,12 +47,14 @@
         Não Integrar Título ao ERP *caso solicitação for reprovada
       </label>
     </div>
+
     <div class="row">
       <div class="col-md-12">
         <label for="SupAproJusti" class="form-label">Motivo Reprovação *caso solicitação for reprovada</label>
         <input id="SupAproJusti" type="text" 
-          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required">
-      </div>
+          class="form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required" oninput="VerificaSeMotivoEstaPreenchido()">
+          <div class="invalid-feedback">*Campo Obrigatório</div>
+        </div>
     </div>
     <h5>TIPO DA REQUISIÇÃO</h5>
 
