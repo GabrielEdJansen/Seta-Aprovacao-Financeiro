@@ -435,7 +435,6 @@ function _init(data, info) {
             console.log("Carregando Dados", map);
             const nomFun = map.get("nomFun");
             const emaFun = map.get("emaFun");
-            const DatPag = map.get("DatPag");
             const selectEmpFil = map.get("selectEmpFil");
             const selectTipFor = map.get("selectTipFor");
             const selectFormPag = map.get("selectFormPag");
@@ -529,7 +528,6 @@ function _init(data, info) {
             document.getElementById("Proj").setAttribute("value", Proj);
             document.getElementById("ConFin").setAttribute("value", ConFin);
             document.getElementById("CenCus").setAttribute("value", CenCus);
-            document.getElementById("DatPag").setAttribute("value", DatPag);
             document.getElementById("NumNf").setAttribute("value", NumNf);
             document.getElementById("DatPre").setAttribute("value", DatPre);
             document.getElementById("ObsPag").setAttribute("value", ObsPag);
@@ -634,7 +632,6 @@ function _saveData(data, info) {
     newData.Proj = document.getElementById("Proj").value;
     newData.ConFin = document.getElementById("ConFin").value;
     newData.CenCus = document.getElementById("CenCus").value;
-    newData.DatPag = document.getElementById("DatPag").value;
     newData.NumNf = document.getElementById("NumNf").value;
     newData.DatPre = document.getElementById("DatPre").value;
     newData.ObsPag = document.getElementById("ObsPag").value;
