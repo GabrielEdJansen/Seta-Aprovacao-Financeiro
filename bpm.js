@@ -822,6 +822,7 @@ function _saveData(data, info) {
 
     if (CheckIntegraTitulo == true) {
         newData.AprovSup = "S";
+        newData.integraTitulo = "S";
         newData.cancelarSolicitacao = "N";
     }
     if (CheckNaoIntegraTitulo == true) {
