@@ -127,6 +127,16 @@ function isFormValid() {
     var retornaResultado = 0
     let CheckNaoIntegraTitulo = document.querySelector('#CheckNaoIntegraTitulo').checked
     let CheckIntegraTitulo = document.querySelector('#CheckIntegraTitulo').checked
+    let CheckCancelaIntegraTitulo = document.querySelector('#CheckCancelaIntegraTitulo').checked
+    var nNaoProssegue = 0
+
+    if ((CheckIntegraTitulo == false) && (CheckCancelaIntegraTitulo == false) && (CheckNaoIntegraTitulo == false)) {
+        document.getElementById("CheckIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
+        document.getElementById("CheckNaoIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
+        document.getElementById("CheckCancelaIntegraTitulo").setAttribute("class", "form-check-input is-invalid");
+        nNaoProssegue = 1
+    }
+
 
     var isNullSupAproJusti = document.getElementById("SupAproJusti").value;
     if ((isNullSupAproJusti == '') && (CheckNaoIntegraTitulo == true)) {
@@ -135,10 +145,14 @@ function isFormValid() {
         document.getElementById("SupAproJusti").setAttribute("class", "form-control ng-pristine ng-untouched ng-scope ng-empty ng-valid-pattern ng-valid ng-valid-required is-valid");
         retornaResultado++
     }
-    if(CheckNaoIntegraTitulo = true){
+    if (CheckNaoIntegraTitulo = true) {
         var TotalCampos = 1
-    }else{
-        var TotalCampos = 0  
+    } else {
+        var TotalCampos = 0
+    }
+
+    if (nNaoProssegue == 1) {
+        TotalCampos = 500;
     }
 
     if (TotalCampos == retornaResultado) {
